@@ -7,6 +7,7 @@ package newpackage;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -60,7 +61,9 @@ public class subscribe extends HttpServlet {
             throws ServletException, IOException {
        // processRequest(request, response);
        String email=request.getParameter("email");
-       
+       connection c=new connection();
+       c.addSub(email);
+
        
     }
 
